@@ -1,0 +1,12 @@
+- name: Hello World Sample
+  hosts: all
+  tasks:
+  - name: Hello Message
+    debug:
+     msg: "Hello World!"
+  - name: Touch file
+    file:
+     path: /root/touch.file
+     state: touch
+     mode: "u=rw,g=r,o=r"
+
