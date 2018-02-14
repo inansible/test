@@ -10,8 +10,8 @@
      state: touch
      mode: "u=rw,g=r,o=r"
   - name: Install common
-    apt:
-     pkg:{{ item }}
+    package:
+     name:{{ item }}
      state:latest
     with_items:
     - git
